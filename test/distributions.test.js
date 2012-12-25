@@ -42,4 +42,13 @@ suite('numbers', function() {
     done();
   });
 
+  test('segment should return the hyergeometric distribution for the given params', function(done) {
+    var res1 = distribution.hypergeometric(2, 10, 2, 5);
+    var res2 = distribution.hypergeometric(2, 2, 2, 2);
+
+    assert.equal(0.2222222222222222, res1);
+    assert.equal(1, res2);
+    done();
+  });
+
 });
