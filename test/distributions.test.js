@@ -15,4 +15,13 @@ suite('numbers', function() {
     done();
   });
 
+  test('segment should return the binomial distribution for the given params', function(done) {
+    var res1 = distribution.bernouilli(4, 0.5);
+    var res2 = distribution.bernouilli(2, 0.3);
+    
+    assert.equal(0.5, res1);
+    assert.equal(0.12857142857142856, res2);
+    done();
+  });
+
 });
