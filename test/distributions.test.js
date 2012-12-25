@@ -60,4 +60,13 @@ suite('numbers', function() {
     done();
   });
 
+  test('segment should return the uniform distribution for the given params', function(done) {
+    var res1 = distribution.uniform(2, 4);
+    var res2 = distribution.uniform(0.5, 0.8);
+
+    assert.equal(0.5, res1);
+    assert.equal(3.333333333333333, res2);
+    done();
+  });
+
 });
