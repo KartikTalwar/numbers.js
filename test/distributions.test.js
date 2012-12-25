@@ -33,4 +33,13 @@ suite('numbers', function() {
     done();
   });
 
+  test('segment should return the geometric distribution for the given params', function(done) {
+    var res1 = distribution.geometric(4, 0.5);
+    var res2 = distribution.geometric(2, 0.32);
+
+    assert.equal(0.03125, res1);
+    assert.equal(0.147968, res2);
+    done();
+  });
+
 });
