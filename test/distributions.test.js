@@ -51,4 +51,13 @@ suite('numbers', function() {
     done();
   });
 
+  test('segment should return the Poisson distribution for the given params', function(done) {
+    var res1 = distribution.poisson(2, 0.32);
+    var res2 = distribution.poisson(2, 2, 0.16);
+
+    assert.equal(0.03717883069817298, res1);
+    assert.equal(0.03717883069817298, res2);
+    done();
+  });
+
 });
