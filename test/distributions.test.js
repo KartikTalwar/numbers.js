@@ -69,4 +69,13 @@ suite('numbers', function() {
     done();
   });
 
+  test('segment should return the exponential distribution for the given params', function(done) {
+    var res1 = distribution.exponential(2, 4);
+    var res2 = distribution.exponential(2, 0.8);
+
+    assert.equal(0.0013418505116100478, res1);
+    assert.equal(0.16151721439572433, res2);
+    done();
+  });
+
 });
