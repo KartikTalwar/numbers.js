@@ -78,4 +78,13 @@ suite('numbers', function() {
     done();
   });
 
+  test('segment should return the normal distribution for the given params', function(done) {
+    var res1 = distribution.normal(2, 4, 4);
+    var res2 = distribution.normal(2, 5, .4);
+
+    assert.equal(0.12098536225957168, res1);
+    assert.equal(0.000008204783933643643, res2);
+    done();
+  });
+
 });
